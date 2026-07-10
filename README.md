@@ -1,8 +1,8 @@
 # Mod Header
 
-A lightweight Chrome extension for setting, appending, or removing request and response headers, and for redirecting URLs — all from a toolbar popup, with no code or account changes required.
-
 ![Extension demo](screenshots/extension-demo.png)
+
+A lightweight Chrome extension for setting, appending, or removing request and response headers, and for redirecting URLs — all from a toolbar popup, with no code or account changes required.
 
 ## The story
 
