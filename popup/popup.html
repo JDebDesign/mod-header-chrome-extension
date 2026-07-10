@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mod Header</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Header bar -->
+    <header class="toolbar">
+      <div class="toolbar-left">
+        <span class="logo">Mod Header</span>
+        <span class="badge-internal">Internal</span>
+      </div>
+      <div class="toolbar-right">
+        <label class="toggle-label" title="Enable/disable all rules">
+          <input type="checkbox" id="globalToggle" />
+          <span class="toggle-track"></span>
+        </label>
+      </div>
+    </header>
+
+    <!-- Profile bar -->
+    <div class="profile-bar">
+      <select id="profileSelect" title="Active profile"></select>
+      <button id="newProfileBtn" class="icon-btn" title="New profile">+</button>
+      <button id="renameProfileBtn" class="icon-btn" title="Rename profile">✏️</button>
+      <button id="deleteProfileBtn" class="icon-btn danger" title="Delete profile">🗑</button>
+      <label class="toggle-label small" title="Enable/disable this profile">
+        <input type="checkbox" id="profileToggle" />
+        <span class="toggle-track"></span>
+      </label>
+    </div>
+
+    <!-- Rule type tabs -->
+    <div class="rule-tabs">
+      <button class="tab-btn active" data-tab="requestHeader">Request Headers</button>
+      <button class="tab-btn" data-tab="responseHeader">Response Headers</button>
+      <button class="tab-btn" data-tab="redirect">Redirects</button>
+    </div>
+
+    <!-- Rules list -->
+    <div class="rules-container">
+      <div id="rulesList" class="rules-list"></div>
+      <button id="addRuleBtn" class="add-rule-btn">+ Add Rule</button>
+    </div>
+  </div>
+
+  <!-- Rule row template (header) -->
+  <template id="headerRuleTemplate">
+    <div class="rule-row" data-id="">
+      <label class="rule-enabled">
+        <input type="checkbox" class="rule-toggle" />
+      </label>
+      <select class="rule-action">
+        <option value="set">Set</option>
+        <option value="append">Append</option>
+        <option value="remove">Remove</option>
+      </select>
+      <input type="text" class="rule-name" placeholder="Header name" />
+      <input type="text" class="rule-value" placeholder="Value" />
+      <input type="text" class="rule-url" placeholder="URL filter (blank = all)" />
+      <button class="rule-delete icon-btn danger" title="Delete rule">✕</button>
+    </div>
+  </template>
+
+  <!-- Rule row template (redirect) -->
+  <template id="redirectRuleTemplate">
+    <div class="rule-row redirect-row" data-id="">
+      <label class="rule-enabled">
+        <input type="checkbox" class="rule-toggle" />
+      </label>
+      <input type="text" class="rule-url" placeholder="URL filter (e.g. *://*.example.com/*)" />
+      <span class="redirect-arrow">→</span>
+      <input type="text" class="rule-redirect-url" placeholder="Redirect to URL" />
+      <button class="rule-delete icon-btn danger" title="Delete rule">✕</button>
+    </div>
+  </template>
+
+  <script src="popup.js"></script>
+</body>
+</html>
