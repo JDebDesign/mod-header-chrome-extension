@@ -24,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #004990;
+  background: #5B47E0;
   color: #fff;
   padding: 10px 14px;
 }
@@ -33,17 +33,6 @@ body {
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.3px;
-}
-
-.badge-internal {
-  font-size: 10px;
-  background: rgba(255,255,255,0.25);
-  border-radius: 3px;
-  padding: 1px 5px;
-  margin-left: 7px;
-  vertical-align: middle;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .toolbar-left, .toolbar-right {
@@ -179,12 +168,12 @@ body {
 }
 
 .tab-btn:hover {
-  color: #004990;
+  color: #5B47E0;
 }
 
 .tab-btn.active {
-  color: #004990;
-  border-bottom-color: #004990;
+  color: #5B47E0;
+  border-bottom-color: #5B47E0;
   font-weight: 700;
 }
 
@@ -232,7 +221,7 @@ body {
   width: 15px;
   height: 15px;
   cursor: pointer;
-  accent-color: #004990;
+  accent-color: #5B47E0;
 }
 
 .rule-action {
@@ -261,7 +250,7 @@ body {
 .rule-value:focus,
 .rule-url:focus,
 .rule-redirect-url:focus {
-  border-color: #004990;
+  border-color: #5B47E0;
 }
 
 .rule-row.disabled-rule {
@@ -271,10 +260,10 @@ body {
 .add-rule-btn {
   margin: 10px 0;
   padding: 7px 14px;
-  border: 1.5px dashed #004990;
+  border: 1.5px dashed #5B47E0;
   border-radius: 6px;
   background: none;
-  color: #004990;
+  color: #5B47E0;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;

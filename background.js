@@ -110,7 +110,7 @@ function updateBadge(count, globalEnabled) {
     return;
   }
   chrome.action.setBadgeText({ text: String(count) });
-  chrome.action.setBadgeBackgroundColor({ color: "#0066CC" });
+  chrome.action.setBadgeBackgroundColor({ color: "#5B47E0" });
 }
 
 // Listen for storage changes and re-apply rules
